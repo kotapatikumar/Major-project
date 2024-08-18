@@ -1,0 +1,112 @@
+
+body{
+    font-family:sans-serif !important;
+    display:flex;
+    flex-direction: column;
+    min-height:100vh;
+}
+.layout{
+    flex:1;
+}
+#normal{
+    margin-left:2.5rem;
+}
+
+.navbar{
+    height:4.5rem !important;
+    background-color:white;
+}
+.fa-compass{
+    font-size:2rem;
+    color:#fe424d;
+}
+.nav-link{
+    color:#222222 !important;
+}
+.footer{
+    height:8rem !important;
+    background-color:#ebebeb;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+}
+.icons{
+    width:100%;
+    font-size:1.3rem;
+}
+.icons i{
+    margin:0.3rem;
+}
+.com{
+    width:100%;
+}
+.effect{
+    text-decoration:none !important;
+}
+.privacy a{
+    width:100%;
+    text-decoration:none !important;
+    color:black;
+}
+.privacy a:hover{
+    text-decoration:underline;
+    color:blue;
+}
+.link{
+    text-decoration: none !important;
+}
+
+.listing-card{
+    width:100%;
+    display:flex;
+    margin-bottom:1rem;
+    border:none !important;
+    flex-direction:row;
+    margin-left:1rem !important;
+    text-decoration: none !important;
+
+    /* justify-content:space-between; */
+    
+
+
+}
+.card-img-top{
+    height:20rem;
+    border-radius:1.2rem !important;
+    width:93% !important;
+    object-fit:cover !important;
+
+}
+.card-img-overlay{
+    opacity:0;
+}
+.card-img-overlay:hover{
+    opacity:0.2;
+    background-color: white;
+}
+.head{
+    position:relative;
+    left:20px;
+}
+.submit{
+    background-color:#fe424d !important;
+    color:white !important;
+    border:none !important;
+}
+.edit{
+    background-color:#fe424d !important;
+    color:white !important;
+    border:none !important;
+}
+.show-card{
+    padding-top:0.2rem;
+}
+.btns{
+    display:flex;
+    position:relative;
+    left:20px;
+}
+
+
+

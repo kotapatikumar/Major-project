@@ -1,0 +1,51 @@
+<% layout("/layouts/boilerplate.ejs") -%>
+
+<!-- <body>class="needs-validation" -->
+   <form method="post" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data" >
+      <div class="row offset-2 mb-3">
+         <h2 class="mb-3 mt-4">Create New Listing</h2>
+         <div class="col-md-8  ">
+            <div class="mb-3" >
+               <label class="form-label" for="title">Title</label>
+               <input name="obj[title]" placeholder="Add a catchy title" type="text" id="title" class="form-control" required >
+               <div class="valid-feedback">Title looks good</div>
+               <div class="invalid-feedback">Enter valid Title</div>
+            </div>
+            
+            <div class="mb-3">
+               <label class="form-label" for="des">Description</label>
+               <textarea name="obj[description]" placeholder="Enter the description" type="text" id="des" class="form-control"required ></textarea>
+               <div class="invalid-feedback">Please enter short description</div> 
+            </div>
+          
+         
+            <div class="mb-3">
+               <label class="form-label" for="img">Upload Image Listing</label>
+               <input name="obj[image]"  type="file" id="img"  class="form-control" required >
+            </div>
+
+
+            <div class="row mb-3">
+               <div class="col-md-4 ">
+                  <label class="form-label" for="price">Price</label>
+                  <input name="obj[price]" placeholder="Enter the price" type="text" id="price"  class="form-control" required >
+                  <div class="invalid-feedback">Please enter valid Price</div>
+               </div>
+               <div class=" col-md-8">
+                  <label class="form-label" for="cou">Country</label>
+                  <input name="obj[country]" placeholder="Enter the country "   type="text"  id="cou" class="form-control" required >
+                  <div class="invalid-feedback">Country name should be valid</div>
+               </div>
+            
+            </div>
+            <div class="mb-3">
+               <label class="form-label" for="loc">Location</label>
+               <input name="obj[location]" placeholder="Enter the location " type="text"  id="loc"  class="form-control"required >
+               <div class="invalid-feedback">Location should be valid</div>
+            </div>
+            
+            <button class="btn btn-outline-danger submit">Add</button>
+         </div>
+      </div>
+   </form>
+</body>
