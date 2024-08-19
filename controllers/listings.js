@@ -16,7 +16,7 @@ const asyncWrap=require("../extras/asyncWrap.js");
 module.exports.homeListing=asyncWrap(async (req,res)=>{
     const value= await Listing.find();
     res.render("home.ejs",{value});
-  })
+  });
 
 module.exports.createListing=async(req,res)=>{
 

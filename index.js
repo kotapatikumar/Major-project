@@ -31,7 +31,7 @@ const User=require("./models/user.js");
 
 
 
-const dbUrl=process.env.ATLAS_URL;
+// const dbUrl=process.env.ATLAS_URL;
 
 main()
 .then((res)=>{
@@ -40,7 +40,7 @@ main()
 .catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect(dbUrl);
+  await mongoose.connect('mongodb://127.0.0.1:27017/lovevisit');
 }
 
 app.listen(port,()=>{
@@ -48,20 +48,20 @@ app.listen(port,()=>{
 })
 
 
-const store=MongoStore.create({
-  mongoUrl:dbUrl,
-  crypto: {
-    secret:process.env.SECRET,
-  },
-  touchAfter:24*3600
-})
+// const store=MongoStore.create({
+//   mongoUrl:dbUrl,
+//   crypto: {
+//     secret:process.env.SECRET,
+//   },
+//   touchAfter:24*3600
+// })
 
-store.on("error",()=>{
-    console.log("ERROR IN MONGO SESSION STORE",err);
-}); 
+// store.on("error",()=>{
+//     console.log("ERROR IN MONGO SESSION STORE",err);
+// }); 
 
 const sessionInfo={
-  store,
+  // store,
   secret:process.env.SECRET,
   resave:false,
   saveUninitialized:true,
