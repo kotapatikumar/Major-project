@@ -110,17 +110,18 @@
     // const { coordinates } = require("@maptiler/sdk");
 
     maptilersdk.config.apiKey = "eHyg5wG9hS4QYXwO2V4n";
-    const map = new maptilersdk.Map({
-    container: 'map', // container's id or the HTML element to render the map
-    style: "streets-v2",
-    center: <%- JSON.stringify(value.geometry.coordinates)%> , // starting position [lng, lat]  [ 77.2245,28.6358]
-    zoom: 13, // starting zoom
-  });
+
+  const map = new maptilersdk.Map({
+  container: 'map', // container's id or the HTML element to render the map
+  style: "streets-v2",
+  center: <%-JSON.stringify(value.geometry.coordinates) %>, // starting position [lng, lat]
+  zoom: 13, // starting zoom
+});
 
   const marker = new maptilersdk.Marker({
-    color: "#FF0000",
-    draggable: true
-  }).setLngLat(<%- JSON.stringify(value.geometry.coordinates)%>)
+  color: "#FF0000",
+  draggable: true
+  }).setLngLat(<%-JSON.stringify(value.geometry.coordinates) %>)
   .addTo(map);
   
     </script>
