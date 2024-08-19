@@ -25,7 +25,11 @@ router.route("/:id")
 .put(isAuthenticated,check,upload.single('obj[image]'),listingValidate,controllers.updateListing)
 .delete(isAuthenticated,check,controllers.destroyListing);
   
-router.get("/:id/edit",isAuthenticated,check,controllers.editListing)
+router.get("/:id/edit",isAuthenticated,check,controllers.editListing);
+
+router.get('*', (req, res) => {
+    res.redirect('/');
+});
   
   
   
